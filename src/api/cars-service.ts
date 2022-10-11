@@ -12,4 +12,13 @@ export namespace CarsService {
 		createdAt: string
 	}
 
+	export interface CreateCarDto {
+		brand: string
+		model: string
+		year: number
+		hp: number
+		color: string
+		price_rub: number | null
+		img_preview: string
+	}
 }
