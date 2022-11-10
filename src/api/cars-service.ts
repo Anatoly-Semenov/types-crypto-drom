@@ -13,9 +13,9 @@ export namespace CarsService {
 	}
 
 	export interface CarCreate {
-		brand_id: number
-		model_id: number
-		color_id: number
+		brandId: number
+		modelId: number
+		colorId: number
 		year: number
 		hp: number
 		price_rub: number | null
