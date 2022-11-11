@@ -15,10 +15,10 @@ export namespace CarsService {
 	}
 
 	export interface CarsListQuery {
-		filter: CarsListFilter
-		sort: CarsListSorter
-		limit: number
-		page: number
+		filter?: CarsListFilter
+		sort?: CarsListSorter
+		limit?: number
+		page?: number
 	}
 
 	export interface CarsListFilter {
