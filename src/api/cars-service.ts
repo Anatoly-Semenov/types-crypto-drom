@@ -1,15 +1,39 @@
+import { SortOrder } from "../base"
+
 export namespace CarsService {
 	export interface Car {
 		id: number
 		brand: Brand
 		model: Model
+		color: Color
 		year: number
 		hp: number
-		color: Color
 		price_rub: number | null
 		img_preview: string
 		created_at: string // Date
 		updated_at: string // Date
+	}
+
+	export interface CarsListQuery {
+		filter: CarsListFilter
+		sort: CarsListSorter
+		limit: number
+		page: number
+	}
+
+	export interface CarsListFilter {
+		readonly brand_id?: number
+		readonly model_id?: number
+		readonly color_ids?: string
+		readonly price_rub_from?: number
+		readonly price_rub_to?: number
+		readonly year_from?: number
+		readonly year_to?: number
+	}
+
+	export interface CarsListSorter {
+		readonly year?: SortOrder
+		readonly price_rub?: SortOrder
 	}
 
 	export interface CarCreate {
